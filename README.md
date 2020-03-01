@@ -22,35 +22,35 @@ Tip：Hexo 的官网：https://hexo.io/zh-cn/
 
 2.1 在你的电脑创建一个文件夹，并用命令执行，进入该文件夹
 
-...
+```
 cd Blog
-...
+```
 
 2.2 输入 npm install hexo -g，开始安装 Hexo
 
-...
+```
 npm install hexo -g
-...
+```
 
 2.3 执行完之后，检查是否安装成功
 
-...
+```
 hexo -v
-...
+```
 
 2.4 初始化 Hexo，过程有点长
 
-...
+```
 hexo init
-...
+```
 
 初始化完成后，会提示“Start blogging with Hexo！”
 
 2.5 输入 npm install，安装所需要的组件
 
-...
+```
 npm install
-...
+```
 
 完成到这一步，就可以进入创建博客页面和 创作环节了
 
@@ -60,16 +60,16 @@ npm install
 
 1.1 设置你的用户名称与邮件地址，如果是第一次使用 git 的话
 
-...
+```
 $ git config --global user.name "yourname"
 $ git config --global user.email yourname@test.com
-...
+```
 
 1.2 使用 ssh-keygen 生成私钥和公钥
 
-...
+```
 \$ ssh-keygen -t rsa
-...
+```
 
 生成后 会生成两个文件，路径地址执行命令后会提示
 
@@ -83,7 +83,7 @@ $ git config --global user.email yourname@test.com
 
 代码如下：
 
-...
+```
 
 # Deployment
 
@@ -93,21 +93,21 @@ deploy:
 type: git
 repository: git@github.com:yourname/yourname.github.io.git
 branch: master
-...
+```
 
 1.6 hexo 代码 部署到 gitbug ，还需要安装 hexo-deployer-git 插件,
 
-...
+```
 npm install hexo-deployer-git --save
-...
+```
 
 至此，hexo 代码和 github 的之间的部署通道已经打通了，接下来，就是要利用 hexo 创作文章，生成文件，部署到 gihub 中
 
 #### 2、 新建一篇文章
 
-...
+```
 hexo new "postName" #新建文章
-...
+```
 
 这时候你会在 Blog 中的 source/\_post 文件夹看到你新建的文件了，这样你就可以打开这个文件进行编辑创作了
 
@@ -127,18 +127,18 @@ description: 附加一段文章摘要，字数最好在 140 字以内，会出�
 
 #### 3、创作好文章好，利用 hexo 生成静态网页
 
-...
+```
 
 hexo g 或者 hexo generate
-...
+```
 
 这时候，Blog 目录中 就会出现 public 文件夹，里面就是你生成博客的代码
 
 #### 4、本地预览
 
-...
+```
 hexo s 或者 hexo server
-...
+```
 
 执行后提示
 
@@ -149,9 +149,9 @@ INFO Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 
 #### 5、代码部署到 github
 
-...
+```
 hexo d 或者 hexo deploy
-...
+```
 
 执行结果如下：
 
@@ -178,13 +178,13 @@ Branch 'master' set up to track remote branch 'master' from 'git@github.com:your
 
 进入到自己创建的 Blog 文件夹，执行
 
-...
+```
 git clone https://github.com/iissnan/hexo-theme-next themes/next #下载 NexT 主题
-...
+```
 
 6.2、打开 Blog 文件夹下的\_config.yml 文件，找到 theme 选项,改成自己的主题
 
-...
+````
 
 # Extensions
 
@@ -193,19 +193,21 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next #下载 NexT �
 ## Themes: https://hexo.io/themes/
 
 theme: next
-....
+```.
 
 6.3 清楚本地缓存，重新生成静态页面文件,并部署没，最终得到自己主题博客
 
-...
+````
+
 hexo clean
 hexo g
 hexo s
-....
+
+```.
 
 ### 四、 Hexo 的一些常用命令
 
-...
+```
 
 hexo new "postName" #新建文章
 hexo new page "pageName" #新建页面
@@ -218,4 +220,6 @@ hexo clean #clean 清除缓存文件 (db.json) 和已生成的静态文件 (publ
 hexo help # 查看帮助
 hexo version #查看 Hexo 的版本
 
-...
+```
+
+```
